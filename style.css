@@ -139,3 +139,50 @@ footer {
   padding: 20px;
   font-size: 0.9rem;
 }
+
+.project {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 60px 0;
+}
+
+/* Every even project: reverse order */
+.project:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.project iframe {
+  flex: 1 1 500px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.project .desc {
+  flex: 1 1 400px;
+  font-size: 0.9rem;
+  color: #444;
+  line-height: 1.6;
+  padding: 10px 20px;
+  text-align: justify;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .project {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  .project iframe {
+    width: 100%;
+  }
+
+  .project .desc {
+    text-align: left;
+    padding: 15px;
+  }
+}
